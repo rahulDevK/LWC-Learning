@@ -1,0 +1,9 @@
+<template>
+    <lightning-card title="Update Record Demo">
+        <div class="slds-m-around_small">
+            <lightning-datatable key-field="Id" data={contacts} hide-checkbox-column columns={columns}
+                onsave={handleSave} draft-values={draftValue}>
+            </lightning-datatable>
+        </div>
+    </lightning-card>
+</template>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomApplication xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>View</actionName>
+        <comment>Action override created by Lightning App Builder during activation.</comment>
+        <content>ContactRecord</content>
+        <formFactor>Small</formFactor>
+        <skipRecordTypeSelect>false</skipRecordTypeSelect>
+        <type>Flexipage</type>
+        <pageOrSobjectType>Contact</pageOrSobjectType>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <comment>Action override created by Lightning App Builder during activation.</comment>
+        <content>ContactRecord</content>
+        <formFactor>Large</formFactor>
+        <skipRecordTypeSelect>false</skipRecordTypeSelect>
+        <type>Flexipage</type>
+        <pageOrSobjectType>Contact</pageOrSobjectType>
+    </actionOverrides>
+    <brand>
+        <headerColor>#0070D2</headerColor>
+        <shouldOverrideOrgTheme>false</shouldOverrideOrgTheme>
+    </brand>
+    <formFactors>Small</formFactors>
+    <formFactors>Large</formFactors>
+    <isNavAutoTempTabsDisabled>false</isNavAutoTempTabsDisabled>
+    <isNavPersonalizationDisabled>false</isNavPersonalizationDisabled>
+    <label>Zero to Hero in LWC</label>
+    <navType>Standard</navType>
+    <tabs>LWC_Fundamentals</tabs>
+    <tabs>Apex_in_LWC</tabs>
+    <tabs>CRUD_uiRecordApi</tabs>
+    <tabs>Wire_Adaptors</tabs>
+    <tabs>Base_Components</tabs>
+    <tabs>Navigation_Service</tabs>
+    <tabs>Static_Resources</tabs>
+    <tabs>Lightning_Messaging_Service</tabs>
+    <tabs>Component_Communiction</tabs>
+    <tabs>Quiz_App</tabs>
+    <tabs>Word_Shuffle</tabs>
+    <uiType>Lightning</uiType>
+    <utilityBar>Zero_to_Hero_in_LWC_UtilityBar</utilityBar>
+</CustomApplication>

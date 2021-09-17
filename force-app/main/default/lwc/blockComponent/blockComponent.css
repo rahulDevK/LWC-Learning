@@ -1,0 +1,19 @@
+    .board-block {
+        background-color: white;
+        height: 80px;
+        border: 1px solid wheat;
+        border-radius: 4px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        cursor: pointer;
+        font-weight: bold;
+        font-size: large;
+        box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+        transition: all 0.5s;
+        overflow-wrap: break-word;
+    }
+    
+    .board-block:hover {
+        background-color: darkseagreen;
+        border: 1px solid #ededed;
+    }

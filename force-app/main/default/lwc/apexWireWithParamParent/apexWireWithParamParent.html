@@ -1,0 +1,12 @@
+<template>
+    <lightning-card title="Apex Wire With Parameters">
+        <c-wire-with-parameters-demo account-type={selectedType}></c-wire-with-parameters-demo>
+        <div class="slds-p-horizontal_small">
+            <div class="slds-m-top_small">
+                <lightning-combobox name="accountType" label="Account Type" value={selectedType}
+                    placeholder="Select Account Type" options={typeOptions} onchange={handleChange}>
+                </lightning-combobox>
+            </div>
+        </div>
+    </lightning-card>
+</template>

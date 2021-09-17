@@ -1,0 +1,25 @@
+<template>
+    <div class="board">
+        <lightning-layout>
+            <lightning-layout-item padding="around-small">
+                <div class="win-word slds-text-heading_medium">WORD: {winWord}</div>
+            </lightning-layout-item>
+            <lightning-layout-item padding="around-small">
+                <div class="slds-text-heading_medium">Moves Left: {totalMoves} </div>
+            </lightning-layout-item>
+            <lightning-layout-item padding="around-small">
+                <div class="slds-text-heading_medium">Result: <span class={resultClass}>{result}</span></div>
+            </lightning-layout-item>
+        </lightning-layout>
+        <template if:true={boardDisabled}>
+            <div class="board-disabled"></div>
+        </template>
+        <lightning-layout multiple-rows="true">
+            <template for:each={wordList} for:item="word">
+                <lightning-layout-item key={word.word} size={gridSize}>
+                    <c-block-component onopen={openWord} word={word.word} card-open={word.open}></c-block-component>
+                </lightning-layout-item>
+            </template>
+        </lightning-layout>
+    </div>
+</template>

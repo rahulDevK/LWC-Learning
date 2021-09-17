@@ -1,0 +1,19 @@
+<template>
+    <lightning-card title="LWC Conditional Rendering">
+        <div class="slds-m-around_medium">
+            <lightning-button variant="brand" label={greetingButtonLabel} title="Show/Hide Greetings"
+                onclick={greetingHandler} class="slds-m-around_x-small"></lightning-button>
+
+            <template if:true={showGreeting}>
+                <div>Welcome to Zero to Hero LWC series</div>
+            </template>
+            <template if:false={showGreeting}>
+                <div>No greetings are displayed</div>
+            </template>
+            <lightning-input type="text" label="Guess my city" onkeyup={cityTrackHandler}></lightning-input>
+            <template if:true={rightCity}>
+                <div>You have guessed correct City</div>
+            </template>
+        </div>
+    </lightning-card>
+</template>

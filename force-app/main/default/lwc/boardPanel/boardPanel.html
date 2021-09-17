@@ -1,0 +1,25 @@
+<template>
+    <lightning-card title="Word Shuffle Game">
+        <p class="slds-p-horizontal_small">
+            <lightning-layout>
+                <lightning-layout-item padding="around-small">
+                    <lightning-combobox name="gameMode" label="Game Mode" value={gameModeValue}
+                        placeholder="Select Game Mode" options={gameModes} onchange={modeChangeHandler}
+                        variant="label-hidden"></lightning-combobox>
+                </lightning-layout-item>
+                <lightning-layout-item padding="around-small">
+                    <lightning-button variant="brand" label="Start New Game" title="Start New Game"
+                        onclick={startGameHandler} class="slds-m-left_x-small"></lightning-button>
+                </lightning-layout-item>
+                <lightning-layout-item padding="around-small">
+                    <lightning-button variant="brand" label="Reshuffle Game" title="Reshuffle Game"
+                        onclick={reshuffleHandler} class="slds-m-left_x-small" disabled={reshuffleDisable}>
+                    </lightning-button>
+                </lightning-layout-item>
+            </lightning-layout>
+            <template if:true={gameModeSelected}>
+                <c-board-component onresult={resultHandler} game-mode-value={gameModeValue}></c-board-component>
+            </template>
+        </p>
+    </lightning-card>
+</template>

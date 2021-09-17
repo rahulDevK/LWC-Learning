@@ -1,0 +1,30 @@
+<template>
+    <lightning-card title="LWC Card">
+        <div class="slds-m-around_medium">
+            <div>{title}</div>
+            <lightning-input type="text" label="Enter Course name" onkeyup={changeHandler}></lightning-input>
+            <div>We are back again with course <strong>{fullName}</strong></div>
+        </div>
+    </lightning-card>
+
+    <lightning-card title="@track Properties">
+        <div class="slds-m-around_medium">
+            <lightning-input type="text" label="Enter Your City" onkeyup={addressTrackHandler}></lightning-input>
+            <div>Your new city is <strong>{address.city}</strong></div>
+        </div>
+    </lightning-card>
+
+    <lightning-card title="Update without @track Properties">
+        <div class="slds-m-around_medium">
+            <lightning-input type="text" label="Enter Your Skill" onkeyup={personTrackHandler}></lightning-input>
+            <div>Your new skill is <strong>{person.skill}</strong></div>
+        </div>
+    </lightning-card>
+
+    <lightning-card title="Using Getters">
+        <div class="slds-m-around_medium">
+            <div>Capital of Poland is <strong>{polishCapital}</strong></div>
+            <div>Square of 12 is <strong>{numberSquare}</strong></div>
+        </div>
+    </lightning-card>
+</template>

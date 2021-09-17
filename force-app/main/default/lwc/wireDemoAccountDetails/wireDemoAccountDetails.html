@@ -1,0 +1,27 @@
+<template>
+    <lightning-card title="Wire Adaptor Using Functions">
+        <div class="slds-p-horizontal_small">
+            <template if:true={accountDetails}>
+                <p><strong>Account Name: </strong>{accountDetails.Name.value}</p>
+                <p><strong>Account Type: </strong>{accountDetails.Type.value}</p>
+            </template>
+        </div>
+    </lightning-card>
+    <lightning-card title="Wire Adaptor Using Property">
+        <div class="slds-p-horizontal_small">
+            <template if:true={accountDetailsProperty.data}>
+                <p><strong>Account Name: </strong>{accountDetailsProperty.data.fields.Name.value}</p>
+                <p><strong>Account Industry: </strong>{accountDetailsProperty.data.fields.Industry.value}</p>
+            </template>
+        </div>
+    </lightning-card>
+    <lightning-card title="Wire Adaptor With Dynamic Variable">
+        <div class="slds-p-horizontal_small">
+            <template if:true={dynamicAccountDetails}>
+                <p><strong>Account Name: </strong>{dynamicAccountDetails.Name.value}</p>
+                <p><strong>Account Type: </strong>{dynamicAccountDetails.Type.value}</p>
+                <p><strong>Account Annual Revenue: </strong>{dynamicAccountDetails.AnnualRevenue.value}</p>
+            </template>
+        </div>
+    </lightning-card>
+</template>

@@ -1,0 +1,12 @@
+<template>
+    <!---Carousal Component with Complex Data-->
+    <c-child-carousel-component carousal-data={carousalData}>
+    </c-child-carousel-component>
+
+    <!---Progress bar Component update with action-->
+    <div class="slds-p-around_medium lgc-bg">
+        <lightning-input type="Enter Progress Bar Value" label="Enter Percentage" onkeyup={updateProgress}>
+        </lightning-input>
+    </div>
+    <c-progress-bar-component progress-value={percentage}></c-progress-bar-component>
+</template>

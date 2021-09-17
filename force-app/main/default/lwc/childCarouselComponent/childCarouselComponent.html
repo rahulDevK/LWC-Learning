@@ -1,0 +1,14 @@
+<template>
+    <lightning-card title="Carousel Component">
+        <div class="slds-p-horizontal_small">
+            <lightning-carousel disable-auto-scroll>
+                <template for:each={carousalData} for:item="cdata">
+                    <lightning-carousel-image key={cdata.header} src={cdata.src} header={cdata.header}
+                        description={cdata.description}>
+                    </lightning-carousel-image>
+                </template>
+            </lightning-carousel>
+        </div>
+    </lightning-card>
+
+</template>

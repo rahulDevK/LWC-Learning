@@ -1,0 +1,22 @@
+<template>
+    <lightning-card title="Apex With Imperative Demo">
+        <template if:true={accounts}>
+            <template for:each={accounts} for:item="account">
+                <div class="slds-box slds-box_xx-small slds-m-around_medium" key={account.id}>
+                    <p><strong>Name: </strong>{account.Name}</p>
+                    <p><strong>Type: </strong>{account.Type}</p>
+                    <p><strong>Industry: </strong>{account.Industry}</p>
+                </div>
+            </template>
+        </template>
+        <template if:false={accounts}>
+            <div class="slds-p-horizontal_small">
+                <h2>Search below to see accounts data</h2>
+            </div>
+        </template>
+        <div class="slds-p-horizontal_small">
+            <lightning-input name="enter-search" label="Search Accounts" type="search" onchange={searchHandler}>
+            </lightning-input>
+        </div>
+    </lightning-card>
+</template>

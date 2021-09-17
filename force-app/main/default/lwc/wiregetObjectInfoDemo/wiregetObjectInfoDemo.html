@@ -1,0 +1,22 @@
+<template>
+    <lightning-card title="Get Object Info Demo">
+        <div class="slds-p-horizontal_small">
+            <template if:true={objectDetails}>
+                <p><strong>Object Name: </strong>{objectDetails.apiName}</p>
+                <p><strong>Object Record Type: </strong>{objectDetails.defaultRecordTypeId}</p>
+            </template>
+        </div>
+    </lightning-card>
+    <lightning-card title="Get Multiple Object Info Demo">
+        <div class="slds-p-horizontal_small">
+            <template if:true={allObjectDetails}>
+                <template for:each={allObjectDetails.results} for:item="item">
+                    <div key={item.defaultRecordTypeId}>
+                        <p><strong>Object Name: </strong>{item.result.apiName}</p>
+                        <p><strong>Object Record Type: </strong>{item.result.defaultRecordTypeId}</p>
+                    </div>
+                </template>
+            </template>
+        </div>
+    </lightning-card>
+</template>
